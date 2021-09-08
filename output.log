@@ -1,0 +1,183 @@
+Sending build context to Docker daemon  94.72kB
+Step 1/6 : FROM python:3.8.3-slim
+ ---> 9d84edf35a0a
+Step 2/6 : WORKDIR /app
+ ---> Running in 25f4d97bea53
+Removing intermediate container 25f4d97bea53
+ ---> b0544c016c10
+Step 3/6 : RUN pip install poetry     && poetry config virtualenvs.create false
+ ---> Running in cdce96e2588a
+Collecting poetry
+  Downloading poetry-1.1.8-py2.py3-none-any.whl (173 kB)
+Collecting cachy<0.4.0,>=0.3.0
+  Downloading cachy-0.3.0-py2.py3-none-any.whl (20 kB)
+Collecting cleo<0.9.0,>=0.8.1
+  Downloading cleo-0.8.1-py2.py3-none-any.whl (21 kB)
+Collecting keyring<22.0.0,>=21.2.0; python_version >= "3.6" and python_version < "4.0"
+  Downloading keyring-21.8.0-py3-none-any.whl (32 kB)
+Collecting crashtest<0.4.0,>=0.3.0; python_version >= "3.6" and python_version < "4.0"
+  Downloading crashtest-0.3.1-py3-none-any.whl (7.0 kB)
+Collecting requests<3.0,>=2.18
+  Downloading requests-2.26.0-py2.py3-none-any.whl (62 kB)
+Collecting pexpect<5.0.0,>=4.7.0
+  Downloading pexpect-4.8.0-py2.py3-none-any.whl (59 kB)
+Collecting tomlkit<1.0.0,>=0.7.0
+  Downloading tomlkit-0.7.2-py2.py3-none-any.whl (32 kB)
+Collecting virtualenv<21.0.0,>=20.0.26
+  Downloading virtualenv-20.7.2-py2.py3-none-any.whl (5.3 MB)
+Collecting packaging<21.0,>=20.4
+  Downloading packaging-20.9-py2.py3-none-any.whl (40 kB)
+Collecting cachecontrol[filecache]<0.13.0,>=0.12.4
+  Downloading CacheControl-0.12.6-py2.py3-none-any.whl (19 kB)
+Collecting poetry-core<1.1.0,>=1.0.4
+  Downloading poetry_core-1.0.4-py2.py3-none-any.whl (420 kB)
+Collecting requests-toolbelt<0.10.0,>=0.9.1
+  Downloading requests_toolbelt-0.9.1-py2.py3-none-any.whl (54 kB)
+Collecting shellingham<2.0,>=1.1
+  Downloading shellingham-1.4.0-py2.py3-none-any.whl (9.4 kB)
+Collecting clikit<0.7.0,>=0.6.2
+  Downloading clikit-0.6.2-py2.py3-none-any.whl (91 kB)
+Collecting html5lib<2.0,>=1.0
+  Downloading html5lib-1.1-py2.py3-none-any.whl (112 kB)
+Collecting pkginfo<2.0,>=1.4
+  Downloading pkginfo-1.7.1-py2.py3-none-any.whl (25 kB)
+Collecting jeepney>=0.4.2; sys_platform == "linux"
+  Downloading jeepney-0.7.1-py3-none-any.whl (54 kB)
+Collecting SecretStorage>=3.2; sys_platform == "linux"
+  Downloading SecretStorage-3.3.1-py3-none-any.whl (15 kB)
+Collecting certifi>=2017.4.17
+  Downloading certifi-2021.5.30-py2.py3-none-any.whl (145 kB)
+Collecting urllib3<1.27,>=1.21.1
+  Downloading urllib3-1.26.6-py2.py3-none-any.whl (138 kB)
+Collecting idna<4,>=2.5; python_version >= "3"
+  Downloading idna-3.2-py3-none-any.whl (59 kB)
+Collecting charset-normalizer~=2.0.0; python_version >= "3"
+  Downloading charset_normalizer-2.0.4-py3-none-any.whl (36 kB)
+Collecting ptyprocess>=0.5
+  Downloading ptyprocess-0.7.0-py2.py3-none-any.whl (13 kB)
+Collecting backports.entry-points-selectable>=1.0.4
+  Downloading backports.entry_points_selectable-1.1.0-py2.py3-none-any.whl (6.2 kB)
+Collecting six<2,>=1.9.0
+  Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
+Collecting distlib<1,>=0.3.1
+  Downloading distlib-0.3.2-py2.py3-none-any.whl (338 kB)
+Collecting platformdirs<3,>=2
+  Downloading platformdirs-2.3.0-py3-none-any.whl (13 kB)
+Collecting filelock<4,>=3.0.0
+  Downloading filelock-3.0.12-py3-none-any.whl (7.6 kB)
+Collecting pyparsing>=2.0.2
+  Downloading pyparsing-2.4.7-py2.py3-none-any.whl (67 kB)
+Collecting msgpack>=0.5.2
+  Downloading msgpack-1.0.2-cp38-cp38-manylinux1_x86_64.whl (302 kB)
+Collecting lockfile>=0.9; extra == "filecache"
+  Downloading lockfile-0.12.2-py2.py3-none-any.whl (13 kB)
+Collecting pastel<0.3.0,>=0.2.0
+  Downloading pastel-0.2.1-py2.py3-none-any.whl (6.0 kB)
+Collecting pylev<2.0,>=1.3
+  Downloading pylev-1.4.0-py2.py3-none-any.whl (6.1 kB)
+Collecting webencodings
+  Downloading webencodings-0.5.1-py2.py3-none-any.whl (11 kB)
+Collecting cryptography>=2.0
+  Downloading cryptography-3.4.8-cp36-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.2 MB)
+Collecting cffi>=1.12
+  Downloading cffi-1.14.6-cp38-cp38-manylinux1_x86_64.whl (411 kB)
+Collecting pycparser
+  Downloading pycparser-2.20-py2.py3-none-any.whl (112 kB)
+Installing collected packages: cachy, crashtest, pastel, pylev, clikit, cleo, jeepney, pycparser, cffi, cryptography, SecretStorage, keyring, certifi, urllib3, idna, charset-normalizer, requests, ptyprocess, pexpect, tomlkit, backports.entry-points-selectable, six, distlib, platformdirs, filelock, virtualenv, pyparsing, packaging, msgpack, lockfile, cachecontrol, poetry-core, requests-toolbelt, shellingham, webencodings, html5lib, pkginfo, poetry
+Successfully installed SecretStorage-3.3.1 backports.entry-points-selectable-1.1.0 cachecontrol-0.12.6 cachy-0.3.0 certifi-2021.5.30 cffi-1.14.6 charset-normalizer-2.0.4 cleo-0.8.1 clikit-0.6.2 crashtest-0.3.1 cryptography-3.4.8 distlib-0.3.2 filelock-3.0.12 html5lib-1.1 idna-3.2 jeepney-0.7.1 keyring-21.8.0 lockfile-0.12.2 msgpack-1.0.2 packaging-20.9 pastel-0.2.1 pexpect-4.8.0 pkginfo-1.7.1 platformdirs-2.3.0 poetry-1.1.8 poetry-core-1.0.4 ptyprocess-0.7.0 pycparser-2.20 pylev-1.4.0 pyparsing-2.4.7 requests-2.26.0 requests-toolbelt-0.9.1 shellingham-1.4.0 six-1.16.0 tomlkit-0.7.2 urllib3-1.26.6 virtualenv-20.7.2 webencodings-0.5.1
+[91mWARNING: You are using pip version 20.1.1; however, version 21.2.4 is available.
+You should consider upgrading via the '/usr/local/bin/python -m pip install --upgrade pip' command.
+[0mRemoving intermediate container cdce96e2588a
+ ---> 38c8c8047477
+Step 4/6 : COPY pyproject.toml poetry.lock ./
+ ---> 8c21a2f790f5
+Step 5/6 : RUN poetry install --no-dev -vvv
+ ---> Running in f0d7be0776fd
+Skipping virtualenv creation, as specified in config file.
+Installing dependencies from lock file
+
+Finding the necessary packages for the current system
+
+Package operations: 14 installs, 0 updates, 6 removals, 34 skipped
+
+  • Removing aiohttp (3.7.4.post0): Skipped for the following reason: Not currently installed
+  • Removing async-timeout (3.0.1): Skipped for the following reason: Not currently installed
+  • Removing atomicwrites (1.4.0): Skipped for the following reason: Not currently installed
+  • Removing attrs (21.2.0): Skipped for the following reason: Not currently installed
+  • Removing black (21.8b0): Skipped for the following reason: Not currently installed
+  • Removing colorama (0.4.4): Skipped for the following reason: Not currently installed
+  • Removing coverage (5.5): Skipped for the following reason: Not currently installed
+  • Removing chardet (4.0.0): Skipped for the following reason: Not currently installed
+  • Removing flake8 (3.9.2): Skipped for the following reason: Not currently installed
+  • Removing flake8-polyfill (1.0.2): Skipped for the following reason: Not currently installed
+  • Removing iniconfig (1.1.1): Skipped for the following reason: Not currently installed
+  • Removing isort (5.9.3): Skipped for the following reason: Not currently installed
+  • Removing mccabe (0.6.1): Skipped for the following reason: Not currently installed
+  • Removing multidict (5.1.0): Skipped for the following reason: Not currently installed
+  • Removing mypy (0.812): Skipped for the following reason: Not currently installed
+  • Removing mypy-extensions (0.4.3): Skipped for the following reason: Not currently installed
+  • Removing pathspec (0.9.0): Skipped for the following reason: Not currently installed
+  • Removing pep8-naming (0.10.0): Skipped for the following reason: Not currently installed
+  • Removing pluggy (1.0.0): Skipped for the following reason: Not currently installed
+  • Removing py (1.10.0): Skipped for the following reason: Not currently installed
+  • Removing pycodestyle (2.7.0): Skipped for the following reason: Not currently installed
+  • Removing pyflakes (2.3.1): Skipped for the following reason: Not currently installed
+  • Removing pytest (6.2.5): Skipped for the following reason: Not currently installed
+  • Removing pytest-aiohttp (0.3.0): Skipped for the following reason: Not currently installed
+  • Removing pytest-datadir (1.3.1): Skipped for the following reason: Not currently installed
+  • Removing pytest-httpx (0.10.1): Skipped for the following reason: Not currently installed
+  • Removing pytest-mock (3.6.1): Skipped for the following reason: Not currently installed
+  • Removing regex (2021.8.28): Skipped for the following reason: Not currently installed
+  • Removing toml (0.10.2): Skipped for the following reason: Not currently installed
+  • Removing tomli (1.2.1): Skipped for the following reason: Not currently installed
+  • Removing typed-ast (1.4.3): Skipped for the following reason: Not currently installed
+  • Removing yarl (1.6.3): Skipped for the following reason: Not currently installed
+  • Removing charset-normalizer (2.0.4)
+  • Removing packaging (21.0)
+  • Removing platformdirs (2.3.0)
+  • Removing pyparsing (2.4.7)
+  • Removing requests (2.26.0)
+  • Removing urllib3 (1.26.6)
+  • Installing h11 (0.9.0)
+  • Installing idna (3.2): Skipped for the following reason: Already installed
+  • Installing sniffio (1.2.0)
+  • Installing typing-extensions (3.10.0.2)
+  • Installing certifi (2021.5.30): Skipped for the following reason: Already installed
+  • Installing click (7.1.2)
+  • Installing httpcore (0.12.3)
+  • Installing httptools (0.1.2)
+  • Installing pydantic (1.8.2)
+  • Installing rfc3986 (1.5.0)
+  • Installing uvloop (0.16.0)
+  • Installing starlette (0.13.2)
+  • Installing websockets (8.1)
+  • Installing fastapi (0.55.1)
+  • Installing httpx (0.16.1)
+  • Installing uvicorn (0.11.8)
+Removing intermediate container f0d7be0776fd
+ ---> 8c228cb1d98c
+Step 6/6 : RUN poetry install -vvv
+ ---> Running in 7fac478199f9
+[91mTraceback (most recent call last):
+  File "/usr/local/bin/poetry", line 5, in <module>
+    from poetry.console import main
+  File "/usr/local/lib/python3.8/site-packages/poetry/console/__init__.py", line 1, in <module>
+    from .application import Application
+  File "/usr/local/lib/python3.8/site-packages/poetry/console/application.py", line 7, in <module>
+    from .commands.about import AboutCommand
+  File "/usr/local/lib/python3.8/site-packages/poetry/console/commands/__init__.py", line 4, in <module>
+    from .check import CheckCommand
+  File "/usr/local/lib/python3.8/site-packages/poetry/console/commands/check.py", line 2, in <module>
+    from poetry.factory import Factory
+  File "/usr/local/lib/python3.8/site-packages/poetry/factory.py", line 16, in <module>
+    from .packages.locker import Locker
+  File "/usr/local/lib/python3.8/site-packages/poetry/packages/__init__.py", line 2, in <module>
+    from .locker import Locker
+  File "/usr/local/lib/python3.8/site-packages/poetry/packages/locker.py", line 38, in <module>
+    from poetry.utils.extras import get_extra_package_names
+  File "/usr/local/lib/python3.8/site-packages/poetry/utils/extras.py", line 7, in <module>
+    from poetry.utils.helpers import canonicalize_name
+  File "/usr/local/lib/python3.8/site-packages/poetry/utils/helpers.py", line 11, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+[0mThe command '/bin/sh -c poetry install -vvv' returned a non-zero code: 1
